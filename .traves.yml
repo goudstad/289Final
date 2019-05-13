@@ -1,0 +1,13 @@
+language: python
+dist: xenial
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+install:
+  - pip install -r requirements.txt
+  - pip install -q coveralls
+script:
+  - coverage run --source=289Final om/manage.py test
+after_success:
+  coveralls
