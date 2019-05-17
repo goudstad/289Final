@@ -8,6 +8,6 @@ install:
   - pip install -r requirements.txt
   - pip install -q coveralls
 script:
-  - coverage run --source=289Final om/manage.py test
+  - coverage run --source=om om/manage.py test
 after_success:
   coveralls
