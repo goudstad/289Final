@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/goudstad/om.svg?branch=master)](https://travis-ci.com/goudstad/om) [![Coverage Status](https://coveralls.io/repos/github/goudstad/om/badge.svg?branch=master)](https://coveralls.io/github/goudstad/om?branch=master)
+[![Build Status](https://travis-ci.com/goudstad/289Final.svg?branch=master)](https://travis-ci.com/goudstad/289Final)
 
 \| [CHEATSHEETS](cheatsheet.md) \| [RESOURCES](resources.md) \|
 # 289Final
