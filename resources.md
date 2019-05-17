@@ -10,4 +10,5 @@
     - [What does the "@" sign mean in Python?](https://www.quora.com/What-does-the-sign-mean-in-Python)
 6. [Coveralls](https://coveralls.io/)
 7. [Travis CI](https://travis-ci.com/)
+8. [Great Decisions](http://fortune.com/2012/10/01/the-greatest-business-decisions-of-all-time/)
 
