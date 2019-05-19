@@ -1,5 +1,7 @@
 \| [HOME](README.md) \|
 # CHEATSHEET
+*This page lists some of the frequent commands used to create this project.*
+
 ### Dataset template
 -  d1=Decision(title="Purchase Microsoft Office", decisions="Our Office will purchase two licenses", decisionDate="2016-01-02", backgroundInfo="Two licenses are sufficient to keep the office running", rationale="There are only two people in the office",subject="purchonase",decisionMaker=e)
 
@@ -11,7 +13,7 @@
 - copy db back_db
 
 ### Django management commands
-
+*Source:*
     - python manage.py shell starts the Python interpreter that is Django aware.
     - python manage.py dbshell starts the shell for SQLite3 (or whatever RDBMS you configure)
     - python manage.py runserver runs your application on port 8000 (point your browser at http://127.0.0.1:8000)
