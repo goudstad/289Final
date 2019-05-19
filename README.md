@@ -3,5 +3,5 @@
 
 \| [CHEATSHEETS](cheatsheet.md) \| [RESOURCES](resources.md) \|
 # 289Final
-*Welcome. This GitHub repository was created for IS 289: Web Development class during Spring quarter 2019. The goal is to create a prototype database that can be used to track business decisions to enhance organizatonal memory.  -Raymond Huang*
+*Welcome to 289Final, a GitHub repository created for IS 289: Web Development class during Spring quarter 2019. This prototype database track business decisions in order to enhance organizatonal memory.  -Raymond Huang*
 
