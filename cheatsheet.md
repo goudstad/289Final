@@ -12,6 +12,10 @@
 ### Copying database
 - copy db back_db
 
+### Querying models
+- from hist.models import *
+- e1 = Employee.objects.get(pk=1)
+
 ### Django management commands
 *Source:*
     - python manage.py shell starts the Python interpreter that is Django aware.
@@ -20,6 +24,12 @@
     - python manage.py test catalog runs the test suite in the catalog/tests.py file
     - python manage.py makemigrations checks for changes to your models and makes a migration file
     - python manage.py migrate converts migration files to SQL and implements the changes in the database
+
+## FAQs
+1. I keep getting AttributeError about fields that I renamed.
+	- I resolved this by deleting the db.sqlite 3 file in side the om folder
+	- I also removed the .py files inside hist > migration but leaving __init__.py intact.
+	- I then run python manage.py makemigrations and python manage.py migrate.
 
 
 
