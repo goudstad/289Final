@@ -26,7 +26,7 @@ class Decision (models.Model):
     
     # override default print command
     def __repr__(self):
-        return '<Decision {}: {}>'.format(self.id,self.title)
+        return '<Decision {}: {} - {}>'.format(self.id,self.title, self.decisionDesc)
 
     def __str__(self):
         return repr(self)
