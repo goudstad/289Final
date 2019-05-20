@@ -38,7 +38,7 @@ class Employee(models.Model):
     position = models.CharField(max_length=256)
 
     def __repr__(self):
-        return '<Employee {}: {} {}, {}>'.format(self.id,self.fname,self.lname, self.position)
+        return '<Employee {}: {} {}>'.format(self.id,self.fname,self.lname)
 
     def __str__(self):
         return repr(self)
