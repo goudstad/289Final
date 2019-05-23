@@ -36,7 +36,7 @@ class Command(BaseCommand):
 # left hand side are the fields in the database; the right side are the fields in the spreadsheet.
     def get_or_create_decision(self, row):
         decision, created = Decision.objects.get_or_create(
-            enteredby=row['enteredby'],
+            enteredby.add(row['enteredby']),
             title=row['title'],
             decisionDate=row['decisionDate'],
             decisionDesc=row['decisionDesc'],
