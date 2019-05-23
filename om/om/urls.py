@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# remember to add views here as you create them
 from hist.views import DecisionList, DecisionDetail
 # using functional view
 # from hist.views import decision_details
