@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hist.views import DecisionList, DecisionDetail
+# using functional view
+# from hist.views import decision_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # using functional view
+    # path('hist/<int:dec_id>', decision_details),
+    path('hist/<int:pk>', DecisionDetail.as_view()),
+    path('hist/', DecisionList.as_view())
+
 ]
