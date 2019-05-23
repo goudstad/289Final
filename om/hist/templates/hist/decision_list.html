@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <h1>Decisions</h1>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Desciption</th>
+      </tr>
+      {% for decision in object_list %}
+      <tr>
+        <td>{{decision.title}}</td>
+        <td>{{decision.decisionDesc}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
