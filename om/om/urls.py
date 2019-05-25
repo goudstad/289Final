@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # remember to add views here as you create them
-from hist.views import DecisionList, DecisionDetail
+from hist.views import DecisionList, DecisionDetail, EmployeeList, EmployeeDetail
 # using functional view
 # from hist.views import decision_details
 
@@ -25,6 +25,8 @@ urlpatterns = [
     # using functional view
     # path('hist/<int:dec_id>', decision_details),
     path('hist/<int:pk>', DecisionDetail.as_view()),
-    path('hist/', DecisionList.as_view())
+    path('hist/', DecisionList.as_view()),
+    path('employee/<int:pk>', EmployeeDetail.as_view()),
+    path('employee/', EmployeeList.as_view())
 
 ]

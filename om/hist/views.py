@@ -9,8 +9,16 @@ from .models import Decision, Employee
 
 class DecisionList(ListView):
     model = Decision
-    context_object_name = 'decision'
+    context_object_name = 'decision' # alias
 
 class DecisionDetail(DetailView):
     model = Decision
     context_object_name = 'decision'
+
+class EmployeeList (ListView):
+	model = Employee
+	context_object_name = 'employee'
+
+class EmployeeDetail(DetailView):
+	model = Employee
+	context_object_name = 'employee'

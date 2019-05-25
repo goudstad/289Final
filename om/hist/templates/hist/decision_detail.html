@@ -1,20 +1,36 @@
-<html>
-	<head>
-		<title>{{decision.title}}</title>
-	</head>
-	<body>
-		<h2>{{decision.title}}</h2>
-		<br/>
-		Decision Description: {{decision.decisionDesc}}<br/>
-		Decision Date: {{decision.decisionDate}}<br/>
-		Background Information: {{decision.backgroundInfo}}<br/>
-		Rationale: {{decision.rationale}}<br/>
-		Subject: {{decision.subject}}<br/>
-		Impact: {{decision.impact}}<br/>
-		Lesson Learned: {{decision.lessonLrnd}}<br/>
-		Decision Status: {{decision.decisionStatus}}<br/>
-		Decision Maker: {{decision.decisionMaker}}<br/>
-		Entered By: {{decision.enteredby}}<br/>
+{% extends "hist/base.html" %}
 
-	</body>
-</html>
+{% block title %} RH | OM | Decision: {{decision.title}} {% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h2>{{decision.title}}</h2>
+    <table class="table">
+    	<tr>
+    		<th>Decision Description:</th> <td> {{decision.decisionDesc}}</td>
+    	</tr>
+    	<tr>
+    		<th>Decision Date:</th><td> {{decision.decisionDate}}</td>
+    	</tr>
+    	<tr>
+			<th>Background Information:</th> <td> {{decision.backgroundInfo}}</td>
+		<tr><th>Rationale:</th><td> {{decision.rationale}}</td>
+
+		<tr><th>Subject: </th><td>{{decision.subject}}</td>
+
+		<tr><th>Impact: </th><td>{{decision.impact}}</td>
+
+		<tr><th>Lesson Learned: </th><td>{{decision.lessonLrnd}}</td>
+
+		<tr><th>Decision Status: </th><td>{{decision.decisionStatus}}</td>
+
+		<tr><th>Decision Maker: </th><td>{{decision.decisionMaker}}</td>
+
+		<tr><th>Entered By: </th><td>{{decision.enteredby}}</td>
+</tr>
+	</table>
+
+</div>
+
+{% endblock %}
+		
