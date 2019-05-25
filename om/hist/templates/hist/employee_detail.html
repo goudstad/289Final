@@ -1,0 +1,14 @@
+{% extends "hist/base.html" %}
+
+{% block title %}{{employee.fname}} {{employee.lname}} {% endblock %}
+
+{% block body %}
+
+         <div class="container">
+            <a class="btn btn-outline-secondary" href="/employee/">Back</a>
+            <h2>{{employee.fname}} {{employee.lname}}</h2>
+            <table class="table"><tr><th>Position:</th><td>
+        {{employee.position}}</td></tr>
+    </table>
+</div>
+{% endblock %}

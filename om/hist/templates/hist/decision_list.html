@@ -1,17 +1,25 @@
-<html>
-  <body>
+{% extends "hist/base.html" %}
+
+{% block title %} RH | OM | Employee List {% endblock %}
+
+{% block body %}
+  <div class="container">
     <h1>Decisions</h1>
-    <table>
+    <table class="table table-striped">
       <tr>
         <th>Title</th>
         <th>Desciption</th>
+        <th>Decision Maker</th>
+        <th>&nbsp;</th>
       </tr>
       {% for decision in object_list %}
       <tr>
         <td>{{decision.title}}</td>
         <td>{{decision.decisionDesc}}</td>
+        <td>{{decision.decisionMaker}}</td>
+        <td ><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}">View</a></td>
       </tr>
       {% endfor %}
     </table>
-  </body>
-</html>
+  </div>
+{% endblock %}
