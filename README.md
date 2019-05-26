@@ -12,6 +12,7 @@ This web application project contains the followings:
   - Multiple decisions can be made by multiple employees within an organization.
   - Multiple decisions can be entered by multiple employees within an organization.
 - Ten views and 9 templates
+- [] One form and one template
 - Bootstrap to enhance look and feel.
 - Five sample data for the Decision model, and 10 sample data for the Employee model.
   - Fixtures
