@@ -15,7 +15,7 @@
 - Activate the environment in Windows: `ENV\Scripts\activate`
 - Install the dependencies: `pip install -r requirements.txt`
 
-### General
+#### General
 - See list of installed packages: `pip list`
 
 ## Django
