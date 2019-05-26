@@ -36,7 +36,6 @@ class Decision (models.Model):
     def get_absolute_url(self):
         return reverse('hist-detail', kwargs={'pk':self.pk})
 
-
 class Employee(models.Model):
     fname = models.CharField(max_length=256)
     lname = models.CharField(max_length=256)
