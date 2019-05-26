@@ -1,0 +1,16 @@
+{% extends "hist/base.html" %}
+
+{% block title %} RH | OM | Welcome {% endblock %}
+
+{% block body %}
+  <div class="container">
+      <h1>RH | OM</h1>
+      <p>Welcome.</p>
+    <ul>
+    <li><strong>Decisions:</strong> {{ num_decisions }}</li>
+    <li><strong>Employees:</strong> {{ num_employees }}</li>
+    <li><strong>Decisions In-progress:</strong> {{ num_decisions_in_progress }}</li>
+  </ul>
+
+  </div>
+{% endblock %}
