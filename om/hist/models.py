@@ -11,7 +11,7 @@ class Decision (models.Model):
         )
     title = models.CharField(max_length=256, blank=True)
     decisionDesc = models.TextField(blank=True)
-    decisionDate = models.DateField(blank=True)
+    decisionDate = models.DateField(blank=True, null=True)
     backgroundInfo = models.TextField(blank=True)
     rationale = models.TextField(blank = True)
     subject = models.CharField(max_length=256, blank=True)
