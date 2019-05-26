@@ -3,13 +3,13 @@
 # CHEATSHEET
 *This page lists some of the frequent commands used to create this project.*
 
-# Command Line
+## Command Line
 ### Copying database
 - `copy db back_db`
 ### Changing Directory - two levels up
 `cd..\..\`
 
-# Python
+## Python
 ### Create Virtual Environment
 - Create a virtual environment in the current directory: `python -m venv ENV`
 - Activate the environment in Windows: `ENV\Scripts\activate`
@@ -18,7 +18,7 @@
 ### General
 - See list of installed packages: `pip list`
 
-# Django
+## Django
 ### Creating a Django Project
 - $ `django-admin startproject` mysite
 
@@ -71,7 +71,7 @@ e1 = Employee.objects.get(pk=1)
 - `python manage.py makemigrations` checks for changes to your models and makes a migration file
 - `python manage.py migrate` converts migration files to SQL and implements the changes in the database
 
-# Git
+## Git
 ### Git commands
 - `git clone https://github.com/joshuago78/labcat.git`
 - `git pull`
@@ -85,7 +85,7 @@ e1 = Employee.objects.get(pk=1)
 - `git checkout -b project-models/1`
 	- Switches to a new branch ‘project-models/1’
 
-# SQLite 3
+## SQLite 3
 ## FAQs
 1. I keep getting AttributeError about fields that I renamed.
 	- I resolved this by deleting the db.sqlite 3 file in side the om folder
