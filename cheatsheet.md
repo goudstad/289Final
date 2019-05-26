@@ -6,8 +6,9 @@
 ## Command Line
 #### Copying database
 - `copy db back_db`
+
 #### Changing Directory - two levels up
-`cd..\..\`
+`cd ..\..\`
 
 ## Python
 #### Create Virtual Environment
@@ -25,6 +26,28 @@
 #### Creating a Django App
 - $ `python mange.py startapp` myapp
 	- This will create a folder
+
+#### Creating fixtures
+```python
+# enter data
+`python manage.py shell`
+# To create fixture, exit shell.
+# list directory
+`ls`
+# do this once
+`mkdir hist/fixtures`
+# create fixture file from existing data
+python manage.py dumpdata hist > hist/fixtures/test_data.json
+# creat a copy of exiting db
+copy db.sqlite3 backup_db
+#flush db
+python manage.py flush 
+# load from fixture
+python manage.py loaddata test_data
+```
+
+#### Creating homepage
+- [Tutorial #5](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
 
 #### Dataset template
 -  d1=Decision(title="Purchase Microsoft Office", decisions="Our Office will purchase two licenses", decisionDate="2016-01-02", backgroundInfo="Two licenses are sufficient to keep the office running", rationale="There are only two people in the office",subject="purchonase",decisionMaker=e)
@@ -60,6 +83,7 @@ h1.save ()
 from employee.models import *
 e1 = Employee.objects.get(pk=1)
 ```
+- [Query terms reference (e.g. gte, exactly)](https://docs.djangoproject.com/en/1.11/ref/models/querysets/#gt)
 
 #### Django management commands
 *Source: [https://github.com/joshuago78/labcat](https://github.com/joshuago78/labcat)*
