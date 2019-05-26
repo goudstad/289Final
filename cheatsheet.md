@@ -1,4 +1,4 @@
-\| [HOME](README.md) \|
+e\| [HOME](README.md) \|
 # CHEATSHEET
 *This page lists some of the frequent commands used to create this project.*
 
@@ -28,6 +28,23 @@
 ### Dataset template
 -  d1=Decision(title="Purchase Microsoft Office", decisions="Our Office will purchase two licenses", decisionDate="2016-01-02", backgroundInfo="Two licenses are sufficient to keep the office running", rationale="There are only two people in the office",subject="purchonase",decisionMaker=e)
 
+### Django Templates
+- To display many-to-many field in template, you need to loop through the elements.  You can see this using .all method
+```python
+In [37]: h1.decisionMaker.all()
+Out[37]: <QuerySet [<Employee 5: Tiffany Polar>, <Employee 6: Sundar Pichai>]>
+```
+- Use this code to loop through the elements in the template:
+```python
+{% for employee in decision.decisionMaker.all%}{{employee}},{% endfor %}
+```
+- To hide comma use in the last looped item, use this:
+```python
+{{forloop.last|yesno:",&#44"|safe}}
+Reference:
+https://docs.djangoproject.com/en/2.2/ref/templates/builtins/
+https://stackoverflow.com/questions/22580422/django-loop-remove-last-comma
+```
 ### To create a test dataset 
 - mkdir hist\fixtures
 - python manage.py dumpdata hist > hist/fixtures/test_data.json

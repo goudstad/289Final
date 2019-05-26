@@ -22,11 +22,11 @@
 
 		<tr><th>Lesson Learned: </th><td>{{decision.lessonLrnd}}</td>
 
-		<tr><th>Decision Status: </th><td>{{decision.get_decisionStatus_display()}}</td>
+		<tr><th>Decision Status: </th><td>{{decision.get_decisionStatus_display}}</td>
 
-		<tr><th>Decision Maker: </th><td>{{decision.decisionMaker}}</td>
+		<tr><th>Decision Maker: </th><td>{% for employee in decision.decisionMaker.all%}{{employee}}{{forloop.last|yesno:",&#44"|safe}} {% endfor %}</td>
 
-		<tr><th>Entered By: </th><td>{{decision.enteredby}}</td>
+		<tr><th>Entered By: </th><td>{% for employee in decision.enteredby.all %}{{employee}} {{forloop.last|yesno:",&#44"|safe}}{% endfor %}</td>
 </tr>
 	</table>
 
