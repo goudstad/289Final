@@ -1,4 +1,5 @@
-\| [HOME](README.md) \| [CHEATSHEETS](cheatsheet.md) \|
+\| [README](README.md) \| [CHEATSHEET](cheatsheet.md) \| [RESOURCES](resources.md) \| [KNOWN ISSUES](knownIssues.md) \|
+***
 # Resources
 *This page contains a list of sites that I found helpful during the creation of this project.*
 
