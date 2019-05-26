@@ -11,4 +11,5 @@
 6. [Coveralls](https://coveralls.io/)
 7. [Travis CI](https://travis-ci.com/)
 8. [Great Decisions](http://fortune.com/2012/10/01/the-greatest-business-decisions-of-all-time/)
+9. [Python](https://docs.python.org/3/library/functions.html#repr)
 

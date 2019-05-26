@@ -1,4 +1,6 @@
 from django.db import models
+# get page location
+from django.urls import reverse
 
 # Create your models here.
 class Decision (models.Model):
@@ -31,6 +33,9 @@ class Decision (models.Model):
     def __str__(self):
         return repr(self)
 
+    def get_absolute_url(self):
+        return reverse('hist-detail', kwargs={'pk':self.pk})
+
 
 class Employee(models.Model):
     fname = models.CharField(max_length=256)
@@ -42,3 +47,6 @@ class Employee(models.Model):
 
     def __str__(self):
         return repr(self)
+
+    def get_absolute_url(self):
+        return reverse('employee-detail', kwargs={'pk':self.pk})
