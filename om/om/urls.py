@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # remember to add views here as you create them
-from hist.views import DecisionList, DecisionDetail, EmployeeList, EmployeeDetail
+from hist.views import DecisionList, DecisionDetail, DecisionCreate, DecisionUpdate, DecisionDelete, EmployeeList, EmployeeDetail, EmployeeCreate, EmployeeUpdate, EmployeeDelete
 # using functional view
 # from hist.views import decision_details
 
@@ -24,9 +24,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # using functional view
     # path('hist/<int:dec_id>', decision_details),
-    path('hist/<int:pk>', DecisionDetail.as_view()),
-    path('hist/', DecisionList.as_view()),
-    path('employee/<int:pk>', EmployeeDetail.as_view()),
-    path('employee/', EmployeeList.as_view())
-
+    path('hist/', DecisionList.as_view(), name='hist-list'),
+    path('hist/add', DecisionCreate.as_view(), name='hist-add'),
+    path('hist/<int:pk>', DecisionDetail.as_view(), name='hist-detail'),
+    path('hist/<int:pk>/edit', DecisionUpdate.as_view(), name='hist-update'),
+    path('hist/<int:pk>/delete', DecisionDelete.as_view(), name='hist-delete'),    
+    path('employee/', EmployeeList.as_view(), name='employee-list'),
+    path('employee/add', EmployeeCreate.as_view(), name='employee-add'),
+    path('employee/<int:pk>', EmployeeDetail.as_view(), name='employee-detail'),    
+    path('employee/<int:pk>/edit', EmployeeUpdate.as_view(), name='employee-update'),
+    path('employee/<int:pk>/delete', EmployeeDelete.as_view(), name='employee-delete')
 ]
