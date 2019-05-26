@@ -1,4 +1,5 @@
-e\| [HOME](README.md) \|
+\| [README](README.md) \| [CHEATSHEET](cheatsheet.md) \| [RESOURCES](resources.md) \| [KNOWN ISSUES](knownIssues.md) \|
+***
 # CHEATSHEET
 *This page lists some of the frequent commands used to create this project.*
 
