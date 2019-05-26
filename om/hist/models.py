@@ -11,13 +11,14 @@ class Decision (models.Model):
         )
     title = models.CharField(max_length=256, blank=True)
     decisionDesc = models.TextField(blank=True)
-    decisionDate = models.DateField(auto_now_add=True)
+    decisionDate = models.DateField(blank=True)
     backgroundInfo = models.TextField(blank=True)
     rationale = models.TextField(blank = True)
     subject = models.CharField(max_length=256, blank=True)
     impact = models.TextField(blank = True)
     lessonLrnd = models.TextField(blank=True)
     decisionStatus = models.CharField(max_length=1, choices=STATUS, default='1')
+    DateLastUpdate = models.DateField(auto_now_add=True)
 
     # define one-to-many relationship
     # decisionMaker = models.ForeignKey('Employee', on_delete=models.CASCADE, blank=True, null=True)

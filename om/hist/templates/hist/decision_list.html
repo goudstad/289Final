@@ -16,7 +16,7 @@
       <tr>
         <td>{{decision.title}}</td>
         <td>{{decision.decisionDesc}}</td>
-        <td>{{decision.decisionMaker}}</td>
+        <td>{% for employee in decision.decisionMaker.all%}{{employee}}{{forloop.last|yesno:",&#44"|safe}}{% endfor %}</td>
         <td ><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}">View</a></td>
       </tr>
       {% endfor %}
