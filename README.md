@@ -30,6 +30,7 @@ This web application project contains the followings:
     employee/<int:pk>/edit [name='employee-update']
     employee/<int:pk>/delete [name='employee-delete']
  ```
+- Added Travis CI and Coveralls
 
 -Raymond Huang*
 
