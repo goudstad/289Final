@@ -66,8 +66,8 @@ Out[37]: <QuerySet [<Employee 5: Tiffany Polar>, <Employee 6: Sundar Pichai>]>
 ```python
 {{forloop.last|yesno:",&#44"|safe}}
 Reference:
-https://docs.djangoproject.com/en/2.2/ref/templates/builtins/
-https://stackoverflow.com/questions/22580422/django-loop-remove-last-comma
+[https://docs.djangoproject.com/en/2.2/ref/templates/builtins/](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/)
+[https://stackoverflow.com/questions/22580422/django-loop-remove-last-comma](https://stackoverflow.com/questions/22580422/django-loop-remove-last-comma)
 ```
 #### To create a test dataset 
 - mkdir hist\fixtures
