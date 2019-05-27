@@ -3,6 +3,15 @@
 # CHEATSHEET
 *This page lists some of the frequent commands used to create this project.*
 
+## Running this application
+	1. Clone this repository
+	2. Create a virtural environment: `$ 289Final/python -m vene ENV`
+	3. Activate virtual environment (Windows): `$ ENV/Scripts/activate' 
+	4. Install required packages: `289Final/OM/289Final/pip install -r requirements.txt'
+	5. Create database: `python manage.py migrate'
+	6. Load data: 'python manage.py loaddata test_data.json'
+	7. Run Server: 'python manage.py runserver'
+
 ## Command Line
 #### Copying database
 - `copy db back_db`
@@ -43,7 +52,7 @@ copy db.sqlite3 backup_db
 #flush db
 python manage.py flush 
 # load from fixture
-python manage.py loaddata test_data
+python manage.py loaddata test_data.json
 ```
 
 #### Creating homepage
