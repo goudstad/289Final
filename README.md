@@ -4,15 +4,15 @@
 \| [README](README.md) \| [CHEATSHEET](cheatsheet.md) \| [RESOURCES](resources.md) \| [KNOWN ISSUES](knownIssues.md) \|
 ***
 # 289Final
-*Welcome to 289Final.  This GitHub repository is a final class project created by Raymond Huang for IS 289 course: Web Development during Spring quarter 2019. This prototype database uses Python, Django, and SQLite 3 to track business decisions in order to enhance organizatonal memory.  
+*Welcome to 289Final.  This GitHub repository is a final class project created by Raymond Huang for IS 289 course: Web Development during Spring quarter 2019. This prototype database uses Python, Django, and SQLite 3 to track business decisions in order to enhance organizatonal memory.*  
 
 This web application project contains the followings:
 - Two models: Decision and Employee.
 - Two relationships: Decisions to employees (many-to-many) on fields decisionMaker and enteredby
   - Multiple decisions can be made by multiple employees within an organization.
   - Multiple decisions can be entered by multiple employees within an organization.
-- Ten views and 9 templates
-- [] One form and one template
+- 11 views and 12 templates
+- One Contact form
 - Bootstrap to enhance look and feel.
 - Five sample data for the Decision model, and 10 sample data for the Employee model.
   - Fixtures
