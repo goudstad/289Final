@@ -3,14 +3,19 @@
 {% block title %} RH | OM | Welcome {% endblock %}
 
 {% block body %}
-  <div class="container">
-      <h1>RH | OM</h1>
-      <p>Welcome.</p>
-    <ul>
-    <li><strong>Decisions:</strong> {{ num_decisions }}</li>
-    <li><strong>Employees:</strong> {{ num_employees }}</li>
-    <li><strong>Decisions In-progress:</strong> {{ num_decisions_in_progress }}</li>
-  </ul>
 
+  <div class="container">
+  	<div class="jumbotron">
+      <h1 class="display-4">Organizational Memory Database</h1>
+      <p class="lead">Retaining business decisions</p>
+      <hr class="my-4">
+      <p>We make decisions every day. Past business decisions provide context to the status quo and they can speed up the current decision making process.  Use this database to record view past decisions within the organization.</p></div>
+    <strong>What's in the database</strong>
+    <ul>
+    <li><span class="badge badge-info">{{ num_decisions }} </span><strong> Decisions</strong> </li>
+    <li><span class="badge badge-info">{{ num_employees }}</span><strong> Employees</strong> </li>
+    <li><span class="badge badge-info">{{ num_decisions_in_progress }} </span><strong> Decisions In-progress</strong> </li>
+  </ul>
   </div>
+
 {% endblock %}

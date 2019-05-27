@@ -5,7 +5,7 @@
 {% block body %}
 {% include "hist/breadcrumb_employee.html" %}
          <div class="container">
-            <a class="btn btn-outline-secondary" href="/employee/">Back</a>
+            <div align="right"><a class="btn btn-outline-secondary" href="{% url 'employee-list' %}">Back</a></div>
             <h2>{{employee.fname}} {{employee.lname}}</h2>
             <table class="table"><tr><th>Position:</th><td>
         {{employee.position}}</td></tr>
