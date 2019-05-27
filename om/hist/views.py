@@ -49,16 +49,12 @@ class EmployeeDelete(DeleteView):
 
 def index(request):
     """View function for home page of site."""
-
     # Generate counts of some of the main objects
     num_decisions = Decision.objects.all().count()
-    
-    # Available books (status = 'a')
+    # Decisions in progress
     num_decision_in_progress = Decision.objects.filter(decisionStatus__exact='1').count()
-    
     # The 'all()' is implied by default.    
     num_employees = Employee.objects.count()
-    
     context = {
         'num_decisions': num_decisions,
         'num_employees': num_employees,
