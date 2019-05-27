@@ -11,4 +11,4 @@ script:
   # select file?
   - coverage run --source=om om/manage.py test
 after_success:
-  coveralls
+ - coveralls
