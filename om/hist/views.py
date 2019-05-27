@@ -4,12 +4,8 @@ from django.shortcuts import render, get_object_or_404
 from django.conf import settings
 from django.urls import reverse_lazy
 from .models import Decision, Employee #import data models
-from .forms import fm_addEmployee # import custom forms
-
-# using functional view
-#def decision_details(request, dec_id):
-#    dec=get_object_or_404(Decision, pk=dec_id)
-#    return render(request,'hist/decision_detail.html', {'decision': dec})
+from .forms import fm_contact # import custom forms
+from django.core.mail import send_mail
 
 class DecisionList(ListView):
     model = Decision
@@ -71,3 +67,22 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'hist/index.html', context=context)
+
+class ContactView(FormView):
+    template_name = 'hist/contact.html'
+    form_class = fm_contact
+
+    def form_valid(self, form):
+        subject = form.cleaned_data['subject']
+        message = form.cleaned_data['message']
+        sender = form.cleaned_data['email']
+        first_name = form.cleaned_data['first_name']
+        last_name = form.cleaned_data['last_name']
+        receiver = settings.CONTACT_EMAIL
+        send_mail(subject, message, sender, [receiver])
+        success = 'Message "{}" sent successfully'.format(message)
+        context = {
+            'form': fm_contact,
+            'success': success
+        }
+        return render(self.request, 'hist/contact.html', context)

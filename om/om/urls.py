@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 # remember to add views here as you create them
-from hist.views import DecisionList, DecisionDetail, DecisionCreate, DecisionUpdate, DecisionDelete, EmployeeList, EmployeeDetail, EmployeeCreate, EmployeeUpdate, EmployeeDelete, index
+from hist.views import DecisionList, DecisionDetail, DecisionCreate, DecisionUpdate, DecisionDelete, EmployeeList, EmployeeDetail, EmployeeCreate, EmployeeUpdate, EmployeeDelete, index, ContactView
 # using functional view
 # from hist.views import decision_details
 
@@ -34,5 +35,6 @@ urlpatterns = [
     path('employee/add', EmployeeCreate.as_view(), name='employee-add'),
     path('employee/<int:pk>', EmployeeDetail.as_view(), name='employee-detail'),    
     path('employee/<int:pk>/edit', EmployeeUpdate.as_view(), name='employee-update'),
-    path('employee/<int:pk>/delete', EmployeeDelete.as_view(), name='employee-delete')
+    path('employee/<int:pk>/delete', EmployeeDelete.as_view(), name='employee-delete'),
+    path('contact', ContactView.as_view(), name='contact-view'),
 ]
