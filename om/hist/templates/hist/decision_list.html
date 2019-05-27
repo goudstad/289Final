@@ -1,6 +1,6 @@
 {% extends "hist/base.html" %}
 
-{% block title %} RH | OM | Employee List {% endblock %}
+{% block title %} RH | OM | Decision List {% endblock %}
 
 {% block body %}
   <div class="container">
@@ -10,6 +10,7 @@
         <th>Title</th>
         <th>Desciption</th>
         <th>Decision Maker</th>
+        <th>Decision Status</th>
         <th>&nbsp;</th>
       </tr>
       {% for decision in object_list %}
@@ -17,6 +18,7 @@
         <td>{{decision.title}}</td>
         <td>{{decision.decisionDesc}}</td>
         <td>{% for employee in decision.decisionMaker.all%}{{employee}}{{forloop.last|yesno:",&#44"|safe}}{% endfor %}</td>
+        <td>{{decision.get_decisionStatus_display}}
         <td ><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}">View</a></td>
       </tr>
       {% endfor %}
