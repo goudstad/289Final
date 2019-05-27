@@ -3,7 +3,7 @@
 {% block title %}{{employee.fname}} {{employee.lname}} {% endblock %}
 
 {% block body %}
-
+{% include "hist/breadcrumb_employee.html" %}
          <div class="container">
             <div align="right"><a class="btn btn-outline-secondary" href="{% url 'employee-list' %}">Back</a></div>
             <h2>{{employee.fname}} {{employee.lname}}</h2>
