@@ -4,6 +4,7 @@
 
 {% block body %}
   <div class="container">
+    <div align="right"><a class="btn btn-primary" href="{% url 'hist-add' %}" role="button">Create New</a></div>
     <h1>Decisions</h1>
     <table class="table table-striped">
       <tr>
@@ -11,6 +12,7 @@
         <th>Desciption</th>
         <th>Decision Maker</th>
         <th>Decision Status</th>
+        <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
       {% for decision in object_list %}
@@ -20,6 +22,7 @@
         <td>{% for employee in decision.decisionMaker.all%}{{employee}}{{forloop.last|yesno:",&#44"|safe}}{% endfor %}</td>
         <td>{{decision.get_decisionStatus_display}}
         <td ><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}">View</a></td>
+        <td ><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}/delete">Delete</a></td>
       </tr>
       {% endfor %}
     </table>

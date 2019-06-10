@@ -18,7 +18,7 @@ class Decision (models.Model):
     impact = models.TextField(blank = True)
     lessonLrnd = models.TextField(blank=True)
     decisionStatus = models.CharField(max_length=1, choices=STATUS, default='1')
-    DateLastUpdate = models.DateField(auto_now_add=True)
+    DateLastUpdate = models.DateField(auto_now=True, blank=True)
 
     # define one-to-many relationship
     # decisionMaker = models.ForeignKey('Employee', on_delete=models.CASCADE, blank=True, null=True)

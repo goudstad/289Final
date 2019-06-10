@@ -4,12 +4,14 @@
 
 {% block body %}
   <div class="container">
+      <div align="right"><a class="btn btn-primary" href="{% url 'employee-add' %}" role="button">Create New</a></div>
       <h1>Employees</h1>
       <table class="table table-striped">
         <tr>
           <th>Last Name</th>
           <th>First Name</th>
           <th>Position</th>
+          <th>&nbsp;</th>
           <th>&nbsp;</th>
         </tr>
         {% for employee in object_list %}
@@ -18,6 +20,7 @@
             <td>{{employee.fname}}</td>
             <td>{{employee.position}}</td>
             <td><a class="btn btn-outline-secondary" href="/employee/{{employee.pk}}">View</a></td>
+            <td><a class="btn btn-outline-secondary" href="/employee/{{employee.pk}}/delete">Delete</a></td>            
           </tr>
         {% endfor %}
       </table>
