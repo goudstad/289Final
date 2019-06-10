@@ -4,17 +4,10 @@
 
     {% block title %}RH | OM | Decision Creation Form{% endblock %}
 
-    {% block supplemental_css %}
-    <style>
-      body {
-        padding-top: 6.5rem;
-      }
-    </style>
-    {% endblock %}
-
     {% block body %}
     <main role="main">
       <div class="container">
+        <div align="right"><a class="btn btn-outline-secondary" href="/hist/{{decision.pk}}">Back</a></div>
         <div class="row">
           <form method="post" class="form">
             {% csrf_token %}

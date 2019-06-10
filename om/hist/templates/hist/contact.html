@@ -5,6 +5,9 @@
     {% block title %}RH | OM | Contact{% endblock %}
 
     {% block body %}
+    <div class="container alert alert-primary" role="alert">
+  NOTE: This form relies on a SMTP server to work.  Before submitting the form, please enter <span class="badge badge-secondary">python -m smtpd -n -c DebuggingServer localhost:1025</span> in your termainal. This will print the contents of the emails to your terminal.
+</div>
     <main role="main">
       <div class="container">
         {% if success %}

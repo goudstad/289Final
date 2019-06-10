@@ -25,7 +25,7 @@ class DecisionUpdate(UpdateView):
 
 class DecisionDelete(DeleteView):
     model = Decision
-    success_url = reverse_lazy('decision-list')
+    success_url = reverse_lazy('hist-list')
 
 class EmployeeList (ListView):
     model = Employee
